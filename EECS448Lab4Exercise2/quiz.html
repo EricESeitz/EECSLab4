@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Lab 4 Ex2</title>
+    </head>
+
+<!-- quiz.php not being called correctly? Run through web browser (people.eecs.ku) NOT local -->
+
+	<body>
+        <h1>EECS 448 Lab 4 Unfair Quiz</h1>
+        <form action="quiz.php" method="post">    <!-- post method, different from get -->
+        <table border='1px solid black'>
+            <tr><td>Question 1: When was the Linux kernel first released? </td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="q1" value="September 17, 1991">September 17, 1991<br>  <!-- answers in single cell --> <!-- answer -->
+                <input type="radio" name="q1" value="September 13, 1991">September 13, 1991<br>
+                <input type="radio" name="q1" value="September 12, 1992">September 12, 1992<br>
+                <input type="radio" name="q1" value="September 17, 1992">September 17, 1992
+                </td></tr>
+
+            <tr><td>Question 2: Who is the Linux mascot? </td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="q2" value="Rux the penguin">Rux the penguin<br>  <!-- answers in single cell -->
+                <input type="radio" name="q2" value="Hex the penguin">Hex the penguin<br>
+                <input type="radio" name="q2" value="Rex the penguin">Rex the penguin<br>
+                <input type="radio" name="q2" value="Tux the penguin">Tux the penguin      <!-- answer -->
+                </td></tr>
+
+            <tr><td>Question 3: Who on the original development team is the namesake of Linux? </td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="q3" value="Linus Torwalds">Linus Torwalds<br>   <!-- answers in single cell -->
+                <input type="radio" name="q3" value="Freax Torvalds">Freax Torvalds<br>
+                <input type="radio" name="q3" value="Linus Torvalds">Linus Torvalds<br>   <!-- answer -->
+                <input type="radio" name="q3" value="Linux Torwalds">Linux Torwalds
+                </td></tr>
+
+            <tr><td>Question 4: Who is the current lead maintainer for the Lunix kernel? </td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="q4" value="Greg Kroah-Hartman">Greg Kroah-Hartman<br>  <!-- answers in single cell --> <!-- answer -->
+                <input type="radio" name="q4" value="Adrian Kresinger">Adrian Kresinger<br>
+                <input type="radio" name="q4" value="Albuin Wernicke-Henninger">Albuin Wernicke-Henninger<br>
+                <input type="radio" name="q4" value="Raimund Schoner">Raimund Schoner
+                </td></tr>
+
+            <tr><td>Question 5: What non-US government organization created it's own custom Linux kernel? </td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="q5" value="Ministere de l'Enseignement superieur, de la Recherche et de l'Innovation">Ministere de l'Enseignement superieur, de la Recherche et de l'Innovation<br>  <!-- answers in single cell -->
+                <input type="radio" name="q5" value="Ministerrat der Deutschen Demokratischen Republik">Ministerrat der Deutschen Demokratischen Republik<br>    <!-- answer (made up)-->
+                <input type="radio" name="q5" value="Integrations - och jamstalldhetsdepartementet">Integrations - och jamstalldhetsdepartementet<br>
+                <input type="radio" name="q5" value="Ministere de la Transition ecologique et solidaire">Ministere de la Transition ecologique et solidaire
+                </td></tr>
+        </table>
+        <input type="reset" value="Reset Quiz">
+        <input type="submit" value="Submit Quiz">
+      </form>
+
+	</body>
+</html>
