@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Lab 4 Ex3</title>
+    </head>
+    <link rel="stylesheet" href="style.css" />
+<!-- quiz.php not being called correctly? Run through web browser (people.eecs.ku) NOT local -->
+<script type="text/javascript" src="formChecker.js"></script>
+	<body>
+        <h1>EECS 448 Lab 4 Web Store</h1>
+        <!--         <form action="customerBackend.php" method="post" onsubmit="myChecker()"> -->
+        <form name="myForm" action="customerBackend.php" onsubmit="return validateForm()" method="post">    <!-- post method, different from get -->
+            Enter an Email:<br>
+            <input id="username" type="text" name="username"><br>
+            Enter a password:<br>
+            <input id="password" type="text" name="password"><br>
+            <br><br>
+            <!-- Table for ordering -->
+            <table>
+                <th>Bananas!</th>
+                <tr><td>1 Banana: $1</td></tr>  <!-- header to question -->
+                <tr><td>
+                    <input id = "item1" type="number" min="0" name="oneBanana" value=0>
+                </td></tr>
+                <tr><td>5 Bananas: $4</td></tr>  <!-- header to question -->
+                <tr><td>
+                    <input id = "item2" type="number" min="0" name="5Banana" value=0>
+                </td></tr>
+                <tr><td>10 Bananas: $7</td></tr>  <!-- header to question -->
+                <tr><td>
+                    <input id = "item3" type="number" min="0" name="10Banana" value=0>
+                </td></tr>
+            </table>
+            <br>
+            <!-- Table for shipping -->
+            <table>
+            <tr><td>Please select a shipping option:</td></tr>  <!-- header to question -->
+                <tr><td>
+                <input type="radio" name="shippingOption" value="Free 7 Day">Free 7 Day<br>  <!-- answers in single cell --> <!-- answer -->
+                <input type="radio" name="shippingOption" value="$50.00 over night">$50.00 over night<br>
+                <input type="radio" name="shippingOption" value="$5.00 three day">$5.00 three day
+                </td></tr>
+        </table>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        </form>
+	</body>
+</html>
