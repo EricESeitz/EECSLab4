@@ -2,13 +2,12 @@ function validateForm()
 {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-    let userShippingChoice = document.getElementsByName("shippingOption");
 
     //email validation expression from https://www.w3resource.com/javascript/form/email-validation.php
     //regular expression
     let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (userShippingChoice.checked == false)
+    if (checkRadioButtons() == false)
     {
         alert('Shipping choice required.');
         return false;
@@ -27,4 +26,19 @@ function validateForm()
         return false;
     }
     return true;
+}
+
+//loops through list of radio buttons from Frontend, if one is checked, return true. If non checked, false
+function checkRadioButtons()
+{
+    let userShippingChoice = document.getElementsByName("shippingOption");
+
+    for (let i = 0, length = userShippingChoice.length; i < length; i++) 
+    {
+         if (userShippingChoice[i].checked) 
+         {
+             return true;
+         }
+    }
+    return false;
 }
