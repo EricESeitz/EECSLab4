@@ -2,9 +2,9 @@ function validateForm()
 {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-    let userShippingChoice = document.getElementById("shippingOption");
+    let userShippingChoice = document.getElementsByName("shippingOption");
 
-    //email validation https://www.w3resource.com/javascript/form/email-validation.php
+    //email validation expression from https://www.w3resource.com/javascript/form/email-validation.php
     //regular expression
     let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -20,6 +20,7 @@ function validateForm()
         alert('Incorrect email format.');
         return false;
     }
+    
     if (password.length == 0)
     {
         alert('Password field is empty.');
